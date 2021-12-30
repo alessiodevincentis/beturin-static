@@ -12,6 +12,10 @@ function openCloseMenu() {
 }
 
 function findRooms() {
-    console.log('click find')
-    window.open('https://reservation-beturin.web.app/', '_blank');
+    const dataDa = document.getElementById("checkIn").value;
+    const dataA = document.getElementById("checkOut").value;
+    const adults = document.getElementById("adults").value;
+    const children = document.getElementById("children").value;
+    //window.open('http://localhost:4200/' + '?filter=pepperoni', '_blank');
+    window.open('http://localhost:4200/' + '?dataDa=' + dataDa + '&dataA=' + dataA + '&adults=' + adults + '&children=' + children, '_blank');
 }
