@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Beturin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div class="grid navbarGrid">
+        <div class="col-6">
+            <div class="grid justify-item-start">
+                <div class="col-12">
+                    <h2 class="text-logo">beturin</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 align-self-center">
+            <div class="grid justify-item-end">
+                <div onclick="openCloseMenu()" class="col-12 menu-burger-icon">
+                    <div class="menu-line first-line"></div>
+                    <div class="menu-line second-line"></div>
+                    <div class="menu-line third-line"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MENU OPEN -->
+    <div id="menuDiv" class="open-menu">
+        <div class="grid">
+            <div class="col-12 justify-item-end">
+                <div onclick="openCloseMenu()" class="col-12 close-icon">
+                </div>
+            </div>
+            <div class="col-12">
+                <ul>
+                    <li>HOME</li>
+                    <li>ROOMS</li>
+                    <li>PEOPLE SAY ABOUT US</li>
+                    <li>CONTACT</li>
+                </ul>
+            </div>
+            <div [style]="{'margin-top':'3rem'}" class="col-12">
+                <p class="info-menu-text">Corso Racconigi 140, 10129 Torino</p>
+            </div>
+            <div class="col-12">
+                <p class="info-menu-text">+39 3331234567</p>
+            </div>
+            <div class="col-12">
+                <p class="info-menu-text">info@beturin.com</p>
+            </div>
+            <div [style]="{'margin-top':'1.6rem'}" class="col-12">
+                <p class="info-menu-text">FACEBOOK</p>
+                <p class="info-menu-text">INSTAGRAM</p>
+                <p class="info-menu-text">WHATSAPP</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid justify-item-center align-self-center home-container">
+        <!--  room availability form-->
+        <div class="col-12 align-self-center">
+            <div class="grid justify-item-center align-self-center check-availability-card">
+                <div class="col-12 align-self-center title-section-container">
+                    <p class="title-section">Check our rooms availability</p>
+                </div>
+                <div class="col-12 align-self-center search-date-container">
+                    <label class="label-find-rooms" for="checkIn">Check in</label>
+                    <input type="date" id="checkIn">
+                </div>
+                <div class="col-12 align-self-center search-date-container">
+                    <label class="label-find-rooms" for="checkOut">Check out</label>
+                    <input type="date" id="checkOut">
+                </div>
+                <div class="col-6 align-self-center adults-label-container">
+                    <label class="label-find-rooms" for="checkOut">Adults</label>
+                    <input placeholder="0" type="number" id="adults">
+                </div>
+                <div class="col-6 align-self-center children-label-container">
+                    <label class="label-find-rooms" for="checkOut">Children</label>
+                    <input placeholder="Up to 12 years old" type="number" id="children">
+                </div>
+                <div class="col-12 align-self-center button-find-rooms-container">
+                    <button (click)="findRooms()">FIND ROOMS</button>
+                </div>
+            </div>
+        </div>
+        <!--  room availability form end-->
+
+        <!--  rooms section-->
+        <div class="col-12">
+            <div class="grid">
+                <div class="col-12 room-description-title-container">
+                    <h2 class="text-align-center">Our welcoming rooms</h2>
+                </div>
+                <div class="col-12">
+                    <img class="room-image-home"
+                        src="https://cdna.artstation.com/p/assets/images/images/014/081/626/large/berktan-hatiboglu-modern-render1.jpg?1542377257">
+                </div>
+                <div class="col-12 room-title-container">
+                    <p style="font-size:1.3rem;" class="font-weight-bold">Romantic Room</p>
+                </div>
+                <div class="col-12">
+                    <p style="line-height:24px;">It is a long established fact that a reader will be distracted
+                        by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is
+                        that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
+                        content here', making it look like readable English.</p>
+                </div>
+                <div class="col-12 room-title-container">
+                    <p class="font-weight-bold">Services</p>
+                </div>
+                <div class="col-12">
+                    <p style="line-height:24px;">It is a long established fact that a reader will be distracted
+                        by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is
+                        that it has a more-or-less normal distribution of letters.</p>
+                </div>
+                <div style="margin:1.3rem 0.2rem 3.5rem 0" class="col-6">
+                    <button>a partire da 89€</button>
+                </div>
+                <div style="margin:1.3rem 0 3.5rem 0.2rem" class="col-6">
+                    <button class="inverted-button">VIEW MORE</button>
+                </div>
+
+
+                <div class="col-12">
+                    <img class="room-image-home"
+                        src="https://www.italianbark.com/wp-content/uploads/2018/01/Muji-Hotel-Shenzhen-03-hotel-room-design-trends-italianbark-.jpg">
+                </div>
+                <div class="col-12 room-title-container">
+                    <p style="font-size:1.3rem" class="font-weight-bold">Deluxe Room</p>
+                </div>
+                <div class="col-12">
+                    <p style="line-height:24px">It is a long established fact that a reader will be distracted
+                        by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is
+                        that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
+                        content here', making it look like readable English.</p>
+                </div>
+                <div class="col-12 room-title-container">
+                    <p class="font-weight-bold">Services</p>
+                </div>
+                <div class="col-12">
+                    <p style="line-height:24px">It is a long established fact that a reader will be distracted
+                        by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is
+                        that it has a more-or-less normal distribution of letters.</p>
+                </div>
+                <div style="margin:1.3rem 0.2rem 3.5rem 0" class="col-6">
+                    <button>a partire da 69€</button>
+                </div>
+                <div style="margin:1.3rem 0 3.5rem 0.2rem" class="col-6">
+                    <button class="inverted-button">VIEW MORE</button>
+                </div>
+            </div>
+        </div>
+        <!--  rooms section end-->
+
+        <!--  stories from guests section-->
+        <div class="col-12">
+            <div class="grid">
+                <div style="margin:2.5rem 0 1.8rem 0" class="col-12">
+                    <h2 class="text-align-center">Stories from our guests</h2>
+                </div>
+                <div class="col-12">
+                    <img class="room-review-home"
+                        src="https://image.freepik.com/free-photo/smiling-beautiful-girl-her-handsome-boyfriend-casual-summer-clothes-happy-family-taking-selfie-self-portrait-themselves-smartphone-camera-shows-peace-sign-winking-street_158538-5459.jpg">
+                </div>
+                <div style="margin:1rem 0 0.2rem 0" class="col-12">
+                    <p style="font-style:italic;font-weight:bold;font-size:1.2rem">Like beeing at your
+                        home</p>
+                </div>
+                <div style="margin:1rem 0 4.5rem 0" class="col-12">
+                    <p style="font-style:italic;font-size:1.1rem;line-height:24px">"There are many
+                        variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
+                        some form, by injected humour, or randomised words which don't look even slightly believable."
+                    </p>
+                </div>
+                <div class="col-12">
+                    <img class="room-review-home"
+                        src="https://image.freepik.com/free-photo/medium-shot-people-taking-selfie_23-2149203211.jpg">
+                </div>
+                <div style="margin:1rem 0 0.2rem 0" class="col-12">
+                    <p style="font-style:italic;font-weight:bold;font-size:1.2rem">Very close to Turin
+                        center</p>
+                </div>
+                <div style="margin:1rem 0 4.5rem 0" class="col-12">
+                    <p style="font-style:italic;font-size:1.1rem;line-height:24px">"Many desktop
+                        publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
+                        search for 'lorem ipsum' will uncover many web sites still in their infancy."</p>
+                </div>
+                <div class="col-12">
+                    <img class="room-review-home"
+                        src="https://image.freepik.com/free-photo/portrait-daughter-father-having-fun-together-taking-selfie-while-sitting-couch-home_58466-15563.jpg">
+                </div>
+                <div style="margin:1rem 0 0.2rem 0" class="col-12">
+                    <p style="font-style:italic;font-weight:bold;font-size:1.2rem">Cleanest and nicest
+                        room in Turin</p>
+                </div>
+                <div style="margin:1rem 0 0.5rem 0" class="col-12">
+                    <p style="font-style:italic;font-size:1.1rem;line-height:24px">"Contrary to popular
+                        belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
+                        literature from 45 BC, making it over 2000 years old."</p>
+                </div>
+            </div>
+        </div>
+        <!--  stories from guests section end-->
+
+        <!--  popular attractions section-->
+        <div class="col-12">
+            <div class="grid">
+                <div style="margin:2.5rem 0 1.8rem 0" class="col-12">
+                    <h2 class="text-align-center">Popular attractions in Turin</h2>
+                </div>
+                <div class="col-12">
+                    <img class="popular-attraction-home-img"
+                        src="https://monumentando.altervista.org/wp-content/uploads/2020/01/tumblr_pqqgz3O0ys1ucoccz_1280.jpg">
+                </div>
+                <div style="margin:0.8rem 0" class="col-12">
+                    <div class="grid justify-item-center">
+                        <div class="col-4">
+                            <p>5 min</p>
+                        </div>
+                        <div class="col-4">
+                            <p>22 min</p>
+                        </div>
+                        <div class="col-4">
+                            <p>37 min</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin:0 0 4.5rem 0" class="col-12">
+                    <button class="inverted-button">MOLE ANTONELLIANA</button>
+                </div>
+
+                <div class="col-12">
+                    <img class="popular-attraction-home-img"
+                        src="https://api.museoegizio.it/wp-content/uploads/2018/11/Galleria-Sarcofagi.jpg">
+                </div>
+                <div style="margin:0.8rem" class="col-12">
+                    <div class="grid justify-item-center">
+                        <div class="col-4">
+                            <p>8 min</p>
+                        </div>
+                        <div class="col-4">
+                            <p>35 min</p>
+                        </div>
+                        <div class="col-4">
+                            <p>46 min</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin:0 0 4.5rem 0" class="col-12">
+                    <button class="inverted-button">MUSEO EGIZIO</button>
+                </div>
+
+                <div class="col-12">
+                    <img class="popular-attraction-home-img"
+                        src="https://www.fctp.it/media/locations/photos/f0/5be59a341e939.jpg">
+                </div>
+                <div class="col-12 margin-08">
+                    <div class="grid justify-item-center">
+                        <div class="col-4">
+                            <p>3 min</p>
+                        </div>
+                        <div class="col-4">
+                            <p>25 min</p>
+                        </div>
+                        <div class="col-4">
+                            <p>36 min</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin:0 0 3rem 0" class="col-12">
+                    <button class="inverted-button">PIAZZA VITTORIO VENETO</button>
+                </div>
+
+                <div class="col-12">
+                    <button>VIEW ALL ATTRACTIONS</button>
+                </div>
+            </div>
+        </div>
+        <!--  popular attractions section end-->
+
+        <!--  contact section-->
+        <div style="margin:5rem 0 0 0;width:85%" class="col-12 align-self-center">
+            <div class="grid justify-item-center align-self-center check-availability-card">
+                <div style="margin:1rem 0 0 0" class="col-12 align-self-center">
+                    <p>+39 3403885497</p>
+                </div>
+                <div style="margin:1rem 0" class="col-12 align-self-center">
+                    <p>info@beturin.com</p>
+                </div>
+                <div style="margin:1rem 0" class="col-12 align-self-center">
+                    <p style="font-weight:bold;font-size:1.3rem">Contact us</p>
+                </div>
+                <div style="width:85%;margin:0.3rem 0;" class="col-12 align-self-center">
+                    <label style="text-align:center;margin-bottom:0.3rem" for="name">Name</label>
+                    <input type="text" id="name">
+                </div>
+                <div style="width:85%;margin:0.3rem 0" class="col-12 align-self-center">
+                    <label style="text-align:center;margin-bottom:0.3rem" for="email">Email</label>
+                    <input type="text" id="email">
+                </div>
+                <div style="width:85%;margin:0.3rem 0.3rem 0.3rem 0" class="col-12 align-self-center">
+                    <label style="text-align:center;margin-bottom:0.3rem" for="message">Message</label>
+                    <textarea id="message" [rows]="5"></textarea>
+                </div>
+                <div style="width:80%;margin:1.6rem 0" class="col-12 align-self-center">
+                    <button (click)="sendMessage()">SEND MESSAGE</button>
+                </div>
+            </div>
+        </div>
+        <!--  contact section-->
+    </div>
+
+
+    <!-- FOOTER -->
+    <div class="grid footer-beturin justify-item-center">
+        <div style="margin:1.5rem 0" class="col-12">
+            <p class="text-logo">beturin</p>
+        </div>
+        <div style="margin-bottom:1rem" class="col-12">
+            <p class="footer-text">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
+                interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero.</p>
+        </div>
+        <div class="col-12">
+            <p class="footer-secondary">+39 3403885497</p>
+        </div>
+        <div class="col-12">
+            <p class="footer-secondary">info@beturin.com</p>
+        </div>
+        <div style="margin-bottom:1.5rem" class="col-12">
+            <p class="footer-secondary">Corso Roma 123, Torino</p>
+        </div>
+        <div class="col-12">
+            <p class="footer-secondary">Copyright © <a style="color:white">aledeveloper.com</a></p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
