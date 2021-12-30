@@ -10,3 +10,8 @@ function openCloseMenu() {
         document.getElementById("menuDiv").classList.add('slide-in');
     }
 }
+
+function findRooms() {
+    console.log('click find')
+    window.open('https://reservation-beturin.web.app/', '_blank');
+}
