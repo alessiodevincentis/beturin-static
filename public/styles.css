@@ -3,6 +3,11 @@
   src: url("assets/fonts/Omnes.ttf") format("truetype")
 }
 
+@font-face {
+  font-family: "Calgary";
+  src: url("assets/fonts/calgary.ttf") format("truetype")
+}
+
 ul {
   list-style-type: none;
   color: white;
@@ -379,6 +384,23 @@ a {
   .lg\:col-12 {
     grid-column: auto/span 12;
   }
+  .lg\:justify-item-start {
+    justify-items: start;
+  }
+  .lg\:justify-item-center {
+    justify-items: center;
+  }
+  .lg\:justify-item-end {
+    justify-items: end;
+  }
+
+  ul {
+    font-size: 2.5rem;
+  }
+
+  .info-menu-text {
+    margin: 0;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px){
@@ -417,5 +439,15 @@ a {
   }
   .md\:col-12 {
     grid-column: auto/span 12;
+  }
+
+  .md\:justify-item-start {
+    justify-items: start;
+  }
+  .md\:justify-item-center {
+    justify-items: center;
+  }
+  .md\:justify-item-end {
+    justify-items: end;
   }
 }
